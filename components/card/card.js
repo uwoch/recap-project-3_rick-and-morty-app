@@ -8,7 +8,7 @@ export function createCharacterCard(data) {
 <img
   class="card__image"
   src="${data.image}"
-  alt="${data.name}"
+  alt ="${data.name}"
 />
 <div class="card__image-gradient"></div>
 </div>
@@ -22,8 +22,6 @@ export function createCharacterCard(data) {
   <dt class="card__info-title">Occurrences</dt>
   <dd class="card__info-description">${data.episode.length}</dd>
 </dl>
-</div>
-`;
-/* return listCard;*/
+</div>`;
   cardContainer.append(listCard)
 }
