@@ -1,35 +1,29 @@
-/* const cardContainer = document.querySelector('[data-js="card-container"]')
-const imageSrc = "https://rickandmortyapi.com/api/character/avatar/1.jpeg";
-const title = "Rick Sanchez";
-const status = "Alive";
-const type = "Yes";
-const occurrences = "51"; */
+import { cardContainer } from "../../index.js";
 
-export function createCharacterCard(character) {
-    const card = document.createElement("li");
-    card.classList.add("card");
-
-card.innerHTML = 
+export function createCharacterCard(data) {
+  const listCard = document.createElement("li");
+  listCard.classList.add("card");
+  listCard.innerHTML = 
 `<div class="card__image-container">
 <img
   class="card__image"
-  src=${character.image}"
-  alt=""
+  src=${data.image}"
+  alt="${data.name}"
 />
 <div class="card__image-gradient"></div>
 </div>
 <div class="card__content">
-<h2 class="card__title">${character.name}</h2>
+<h2 class="card__title">${data.name}</h2>
 <dl class="card__info">
   <dt class="card__info-title">Status</dt>
-  <dd class="card__info-description">${character.status}</dd>
+  <dd class="card__info-description">${data.status}</dd>
   <dt class="card__info-title">Type</dt>
-  <dd class="card__info-description">${character.type}</dd>
+  <dd class="card__info-description">${data.type}</dd>
   <dt class="card__info-title">Occurrences</dt>
-  <dd class="card__info-description">${character.occurrences}</dd>
+  <dd class="card__info-description">${data.episode.length}</dd>
 </dl>
 </div>
 `;
-return card;
-/* cardContainer.append(card); */
+/* return listCard;*/
+  cardContainer.append(listCard)
 }
