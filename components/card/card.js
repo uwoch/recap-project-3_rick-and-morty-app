@@ -7,7 +7,7 @@ export function createCharacterCard(data) {
 `<div class="card__image-container">
 <img
   class="card__image"
-  src=${data.image}"
+  src="${data.image}"
   alt="${data.name}"
 />
 <div class="card__image-gradient"></div>
@@ -18,7 +18,7 @@ export function createCharacterCard(data) {
   <dt class="card__info-title">Status</dt>
   <dd class="card__info-description">${data.status}</dd>
   <dt class="card__info-title">Type</dt>
-  <dd class="card__info-description">${data.type}</dd>
+  <dd class="card__info-description">${data.species}</dd>
   <dt class="card__info-title">Occurrences</dt>
   <dd class="card__info-description">${data.episode.length}</dd>
 </dl>
